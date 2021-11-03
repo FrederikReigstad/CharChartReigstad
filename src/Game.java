@@ -71,7 +71,14 @@ public class Game {
     }
 
 
+    private void look()
+    {
+        System.out.println(currentRoom.getLongDescription());
+    }
 
+    private void eat() {
+
+    }
 
 
 
@@ -112,12 +119,20 @@ public class Game {
         else if (commandWord.equals("go")) {
             goRoom(command);
         }
+
+       else if(commandWord.equals("look")) {
+        look();
+    }
+        else if(commandWord.equals("eat")) {
+            eat();
+        }
         else if (commandWord.equals("quit")) {
             wantToQuit = quit(command);
         }
 
         return wantToQuit;
     }
+
 
     // implementations of user commands:
 
@@ -128,11 +143,11 @@ public class Game {
      */
     private void printHelp()
     {
+        System.out.println("Your command words are:");
         System.out.println("You are lost. You are alone. You and youre famliy are hungry");
         System.out.println("around at the backYard.");
+        System.out.println(parser.showCommands());
         System.out.println();
-        System.out.println("Your command words are:");
-        System.out.println("   go quit help");
     }
 
     /**
