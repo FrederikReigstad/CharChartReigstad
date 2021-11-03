@@ -13,6 +13,10 @@ public class Parser {
         reader = new Scanner(System.in);
     }
 
+    /**
+     * @return The next command from the user.
+     */
+    public Command getCommand()
     {
         String inputLine;   // will hold the full input line
         String word1 = null;
