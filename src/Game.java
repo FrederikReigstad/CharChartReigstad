@@ -30,15 +30,13 @@ public class Game {
         pantry = new Room("in the pantry you found the food now you just need to get it home to you're family ");
 
         // initialise room exits
-        outside.setExits("East", kitchen);
         outside.setExits("South", backYard);
         kitchen.setExits("North", hallWay);
-        kitchen.setExits("West", outside);
+        kitchen.setExits("West", backYard);
         hallWay.setExits("South", kitchen);
         hallWay.setExits("West", hallWay);
         backYard.setExits("North", outside);
         backYard.setExits("East", kitchen);
-
         pantry.setExits( "East",  hallWay);
 
         currentRoom = outside;  // start game outside
@@ -89,8 +87,6 @@ public class Game {
         System.out.println("a Muse's World is a new, incredibly boring adventure game.");
         System.out.println("Type 'help' if you need help.");
         System.out.println();
-        System.out.println("You are " + currentRoom.getDescription());
-        System.out.print("Exits: ");
         printLocationInfo();
     }
 
@@ -109,6 +105,7 @@ public class Game {
         }
 
         String commandWord = command.getCommandWord();
+        
         if (commandWord.equals("help")) {
             printHelp();
         }
@@ -131,8 +128,8 @@ public class Game {
      */
     private void printHelp()
     {
-        System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
+        System.out.println("You are lost. You are alone. You and youre famliy are hungry");
+        System.out.println("around at the backYard.");
         System.out.println();
         System.out.println("Your command words are:");
         System.out.println("   go quit help");

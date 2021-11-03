@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Locale;
 
 public class Room {
     private String description;
@@ -27,11 +28,11 @@ public class Room {
      */
     public void setExits(String direction, Room neighbour)
     {
-        exits.put(direction,neighbour);
+        exits.put(direction.toLowerCase(Locale.ROOT),neighbour);
     }
 
     public Room getExit(String direction){
-      return  exits.get(direction);
+      return exits.get(direction);
     }
 
     /**
