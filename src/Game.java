@@ -39,6 +39,8 @@ public class Game {
         backYard.setExits("East", kitchen);
         pantry.setExits( "East",  hallWay);
 
+        kitchen.addItem(new Item("Trap","it's a Muse trap",150));
+
         currentRoom = outside;  // start game outside
     }
 

@@ -4,6 +4,8 @@ import java.util.Locale;
 public class Room {
     private String description;
     private HashMap<String, Room> exits;
+    private HashMap<String, Item> items;
+
 
     /**
      * Create a room described "description". Initially, it has
@@ -16,6 +18,17 @@ public class Room {
 
         this.description = description;
         exits = new HashMap<>();
+
+        items = new HashMap<>();
+
+    }
+
+    public void addItem(Item item){
+        items.put(item.getName(),item);
+    }
+
+    public void getItem(String direction){
+
     }
 
     /**
