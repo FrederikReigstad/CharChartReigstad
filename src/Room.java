@@ -3,8 +3,10 @@ import java.util.Locale;
 
 public class Room {
     private String description;
+    private String ItemDescription;
     private HashMap<String, Room> exits;
     private HashMap<String, Item> items;
+
 
 
     /**
@@ -29,7 +31,17 @@ public class Room {
 
     public void getItem(String direction){
 
+
     }
+
+    public String getItemDescription()
+    {
+        for (i = 0 ; i <  ; i++)
+        items.get().getItemDescription();
+        return ItemDescription;
+    }
+
+
 
     /**
      * Define the exits of this room.  Every direction either leads
@@ -57,13 +69,13 @@ public class Room {
     }
     /**
      * Return a long description of this room, of the form:
-     * You are in the kitchen.
+     * You are in the kitchen. and the item in the room
      * Exits: north west
      * @return A description of the room, including exits.
      */
     public String getLongDescription()
     {
-        return "You are " + description + ".\n" + getExitString();
+        return "You are " + description + ".\n" + getItemDescription() + ".\n" + getExitString() ;
     }
 
     public String getExitString()
