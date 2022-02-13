@@ -1,11 +1,12 @@
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.beans.binding.Bindings;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
-
+//import javax.script.Bindings;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -46,12 +47,19 @@ public class MainViewController implements Initializable {
     public void setUpBindings() {
 
         //Uni-directional binding
-        slider.valueProperty().addListener((observable, oldValue, newValue) -> {
+        /*slider.valueProperty().addListener((observable, oldValue, newValue) -> {
             txtUniBind.setText(newValue.toString());
 
-            //Bi-directional binding
 
-        });
+        });*/
+
+        //Bi-directional binding
+        Bindings.bindBidirectional(
+                txtDualBind.textProperty(),
+                slider.valueProperty(),
+                new ConverterHelper()
+
+        );
     }
 
 
