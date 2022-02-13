@@ -56,7 +56,7 @@ public class MainController {
 
     public void scatterChartBt(ActionEvent actionEvent) throws IOException {
         Stage switchScene = (Stage) AreaChartBt.getScene().getWindow();
-        Parent parent = FXMLLoader.load(getClass().getResource("gui/View/ScatterChart.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("gui/View/ScatterChart.fxml"));
         Scene scene = new Scene(parent);
         switchScene.setScene(scene);
     }
