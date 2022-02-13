@@ -54,4 +54,11 @@ public class AreaChartController {
         switchScene.setScene(scene);
 
     }
+
+    public void scatterChartBt(ActionEvent actionEvent) throws IOException {
+        Stage switchScene = (Stage) LineChartBt.getScene().getWindow();
+        Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("gui/View/ScatterChart.fxml"));
+        Scene scene = new Scene(parent);
+        switchScene.setScene(scene);
+    }
 }
