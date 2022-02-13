@@ -1,4 +1,4 @@
-package Controllers;
+package gui.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,8 +30,8 @@ public class MainController {
         XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
         Random r = new Random();
 
-        for (int i = 0; i < 10; i++ ){
-            series.getData().add(new XYChart.Data<>(i, r.nextInt(550)+ 150));
+        for (int i = 0; i < 10; i++) {
+            series.getData().add(new XYChart.Data<>(i, r.nextInt(550) + 150));
         }
 
       /*  series.setName("Drinks sold in January");
@@ -49,7 +49,7 @@ public class MainController {
 
     public void AreaChartGoBt(ActionEvent actionEvent) throws IOException {
         Stage switchScene = (Stage) AreaChartBt.getScene().getWindow();
-        Parent parent = FXMLLoader.load(getClass().getResource("View/AreaChart.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("gui/View/AreaChart.fxml"));
         Scene scene = new Scene(parent);
         switchScene.setScene(scene);
     }

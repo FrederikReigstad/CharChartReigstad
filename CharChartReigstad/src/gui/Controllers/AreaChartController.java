@@ -1,4 +1,4 @@
-package Controllers;
+package gui.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.Axis;
-import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -31,8 +30,8 @@ public class AreaChartController {
         XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
         Random r = new Random();
 
-        for (int i = 0; i < 10; i++ ){
-            series.getData().add(new XYChart.Data<>(i, r.nextInt(550)+ 150));
+        for (int i = 0; i < 10; i++) {
+            series.getData().add(new XYChart.Data<>(i, r.nextInt(550) + 150));
         }
 
       /*  series.setName("Drinks sold in January");
@@ -49,7 +48,7 @@ public class AreaChartController {
 
     public void LineChartGoBt(ActionEvent actionEvent) throws IOException {
         Stage switchScene = (Stage) LineChartBt.getScene().getWindow();
-        Parent parent = FXMLLoader.load(getClass().getResource("View/MainVeiw.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("gui/View/MainVeiw.fxml"));
         Scene scene = new Scene(parent);
         switchScene.setScene(scene);
 
