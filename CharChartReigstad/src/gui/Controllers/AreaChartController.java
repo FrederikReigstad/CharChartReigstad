@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.Axis;
+import javafx.scene.chart.StackedAreaChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -18,13 +19,13 @@ public class AreaChartController {
     @FXML
     public Button LineChartBt;
     @FXML
-    private AreaChart<Number, Number> chartLine;
+    private StackedAreaChart<Number, Number> AreaChartController;
 
-    public void DrawChart(ActionEvent actionEvent) {
-        Axis<Number> xAxis = chartLine.getXAxis();
+    public void DrawAreaChart(ActionEvent actionEvent) {
+        Axis<Number> xAxis = AreaChartController.getXAxis();
         xAxis.setLabel("Day");
 
-        Axis<Number> yAxis = chartLine.getYAxis();
+        Axis<Number> yAxis = AreaChartController.getYAxis();
         yAxis.setLabel("Drinks sold");
 
         XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
@@ -42,7 +43,7 @@ public class AreaChartController {
         series.getData().add(new XYChart.Data<>(5, 854));
         series.getData().add(new XYChart.Data<>(6, 254)); */
 
-        chartLine.getData().add(series);
+        AreaChartController.getData().add(series);
 
     }
 
