@@ -20,7 +20,7 @@
             <Font size="28.0" />
          </font>
       </Text>
-      <ScatterChart fx:id="scatterChartCh" layoutX="53.0" layoutY="53.0" prefHeight="610.0" prefWidth="919.0">
+      <ScatterChart fx:id="ScatterChartCh" layoutX="53.0" layoutY="53.0" prefHeight="610.0" prefWidth="919.0">
          <xAxis>
             <CategoryAxis side="BOTTOM" />
          </xAxis>
@@ -28,5 +28,6 @@
             <NumberAxis side="LEFT" />
          </yAxis>
       </ScatterChart>
+      <Button fx:id="CategoryAxisBt" layoutX="264.0" layoutY="747.0" mnemonicParsing="false" onAction="#CategoryAxisBt" text="CategoryAxis" />
    </children>
 </AnchorPane>

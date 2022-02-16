@@ -11,9 +11,9 @@
    <children>
       <Button layoutX="53.0" layoutY="680.0" mnemonicParsing="false" onAction="#DrawAreaChart" prefHeight="25.0" prefWidth="919.0" text="Draw Chart" />
       <Button fx:id="LineChartBt" layoutX="53.0" layoutY="737.0" mnemonicParsing="false" onAction="#LineChartGoBt" text="LineChart" />
-      <Button fx:id="scatterChart" layoutX="145.0" layoutY="737.0" mnemonicParsing="false" onAction="#scatterChartBt" text="ScatterChart" />
-      <Button layoutX="274.0" layoutY="737.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="346.0" layoutY="737.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="scatterChartArea" layoutX="145.0" layoutY="737.0" mnemonicParsing="false" onAction="#scatterChartBt" text="ScatterChart" />
+      <Button fx:id="CategoryAxisBt" layoutX="254.0" layoutY="737.0" mnemonicParsing="false" onAction="#CategoryAxisBtArea" text="CategoryAxis" />
+      <Button layoutX="361.0" layoutY="737.0" mnemonicParsing="false" text="Button" />
       <StackedAreaChart fx:id="AreaChartController" layoutX="53.0" layoutY="53.0" prefHeight="610.0" prefWidth="919.0">
         <xAxis>
           <NumberAxis side="BOTTOM" />

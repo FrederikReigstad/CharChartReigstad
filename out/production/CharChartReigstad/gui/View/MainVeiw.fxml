@@ -20,12 +20,12 @@
         <Button layoutX="53.0" layoutY="680.0" mnemonicParsing="false" onAction="#DrawChart" prefHeight="25.0" prefWidth="919.0" text="Draw Chart" />
         <Button fx:id="AreaChartBt" layoutX="66.0" layoutY="737.0" mnemonicParsing="false" onAction="#AreaChartGoBt" text="AreaChart" />
         <Button fx:id="scatterChart" layoutX="158.0" layoutY="737.0" mnemonicParsing="false" onAction="#scatterChartBt" text="ScatterChart" />
-        <Button layoutX="272.0" layoutY="737.0" mnemonicParsing="false" text="Button" />
-        <Button layoutX="344.0" layoutY="737.0" mnemonicParsing="false" text="Button" />
+        <Button layoutX="375.0" layoutY="737.0" mnemonicParsing="false" text="Button" />
       <Text layoutX="450.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chart Line">
          <font>
             <Font size="28.0" />
          </font>
       </Text>
+      <Button fx:id="CategoryAxisBt" layoutX="264.0" layoutY="737.0" mnemonicParsing="false" onAction="#CategoryAxisBtChart" text="CategoryAxis" />
     </children>
 </AnchorPane>

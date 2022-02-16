@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.Axis;
+import javafx.scene.chart.ScatterChart;
 import javafx.scene.chart.StackedAreaChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
@@ -18,13 +19,15 @@ public class ScatterChartController {
     @FXML
     public Button LineChartBt;
     @FXML
-    private StackedAreaChart<Number, Number> scatterChartCh;
+    private ScatterChart<Number, Number> ScatterChartCh;
+    @FXML
+    public Button AreaChartBt;
 
     public void DrawAreaChart(ActionEvent actionEvent) {
-        Axis<Number> xAxis = scatterChartCh.getXAxis();
+        Axis<Number> xAxis = ScatterChartCh.getXAxis();
         xAxis.setLabel("Day");
 
-        Axis<Number> yAxis = scatterChartCh.getYAxis();
+        Axis<Number> yAxis = ScatterChartCh.getYAxis();
         yAxis.setLabel("Drinks sold");
 
         XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
@@ -34,7 +37,7 @@ public class ScatterChartController {
             series.getData().add(new XYChart.Data<>(i, r.nextInt(550) + 150));
         }
 
-        scatterChartCh.getData().add(series);
+        ScatterChartCh.getData().add(series);
 
     }
 
@@ -47,9 +50,12 @@ public class ScatterChartController {
     }
 
     public void AreaChartGoBt(ActionEvent actionEvent) throws IOException {
-        Stage switchScene = (Stage) scatterChartCh.getScene().getWindow();
+        Stage switchScene = (Stage) ScatterChartCh.getScene().getWindow();
         Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("gui/View/AreaChart.fxml"));
         Scene scene = new Scene(parent);
         switchScene.setScene(scene);
+    }
+
+    public void CategoryAxisBt(ActionEvent event) {
     }
 }

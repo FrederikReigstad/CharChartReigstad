@@ -49,15 +49,18 @@ public class MainController {
 
     public void AreaChartGoBt(ActionEvent actionEvent) throws IOException {
         Stage switchScene = (Stage) AreaChartBt.getScene().getWindow();
-        Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("gui/View/AreaChart.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("../View/AreaChart.fxml"));
         Scene scene = new Scene(parent);
         switchScene.setScene(scene);
     }
 
     public void scatterChartBt(ActionEvent actionEvent) throws IOException {
         Stage switchScene = (Stage) AreaChartBt.getScene().getWindow();
-        Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("gui/View/ScatterChart.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("../View/ScatterChart.fxml"));
         Scene scene = new Scene(parent);
         switchScene.setScene(scene);
+    }
+
+    public void CategoryAxisBtChart(ActionEvent event) {
     }
 }

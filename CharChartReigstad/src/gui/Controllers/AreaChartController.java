@@ -19,6 +19,8 @@ public class AreaChartController {
     @FXML
     public Button LineChartBt;
     @FXML
+    public Button scatterChartArea;
+    @FXML
     private StackedAreaChart<Number, Number> AreaChartController;
 
     public void DrawAreaChart(ActionEvent actionEvent) {
@@ -56,9 +58,12 @@ public class AreaChartController {
     }
 
     public void scatterChartBt(ActionEvent actionEvent) throws IOException {
-        Stage switchScene = (Stage) LineChartBt.getScene().getWindow();
+        Stage switchScene = (Stage) scatterChartArea.getScene().getWindow();
         Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("gui/View/ScatterChart.fxml"));
         Scene scene = new Scene(parent);
         switchScene.setScene(scene);
+    }
+
+    public void CategoryAxisBtArea(ActionEvent event) {
     }
 }
