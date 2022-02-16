@@ -1,5 +1,6 @@
 package gui.Controllers;
 
+import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +23,7 @@ public class AreaChartController {
     public Button scatterChartArea;
     @FXML
     private StackedAreaChart<Number, Number> AreaChartController;
+
 
     public void DrawAreaChart(ActionEvent actionEvent) {
         Axis<Number> xAxis = AreaChartController.getXAxis();
@@ -64,6 +66,10 @@ public class AreaChartController {
         switchScene.setScene(scene);
     }
 
-    public void CategoryAxisBtArea(ActionEvent event) {
+    public void CategoryAxisBtArea(ActionEvent event) throws IOException {
+        Stage switchScene = (Stage) scatterChartArea.getScene().getWindow();
+        Parent parent = FXMLLoader.load(getClass().getResource("../View/CategoryAxis.fxml"));
+        Scene scene = new Scene(parent);
+        switchScene.setScene(scene);
     }
 }

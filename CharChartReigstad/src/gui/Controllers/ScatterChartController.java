@@ -23,7 +23,7 @@ public class ScatterChartController {
     @FXML
     public Button AreaChartBt;
 
-    public void DrawAreaChart(ActionEvent actionEvent) {
+    public void DrawScatterChart(ActionEvent actionEvent) {
         Axis<Number> xAxis = ScatterChartCh.getXAxis();
         xAxis.setLabel("Day");
 
@@ -56,6 +56,10 @@ public class ScatterChartController {
         switchScene.setScene(scene);
     }
 
-    public void CategoryAxisBt(ActionEvent event) {
+    public void CategoryAxisBt(ActionEvent event) throws IOException {
+        Stage switchScene = (Stage) AreaChartBt.getScene().getWindow();
+        Parent parent = FXMLLoader.load(getClass().getResource("../View/CategoryAxis.fxml"));
+        Scene scene = new Scene(parent);
+        switchScene.setScene(scene);
     }
 }
